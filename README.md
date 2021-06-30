@@ -4,7 +4,7 @@ jfconv-scripts: Simplified/Traditional Chinese Converter
 How To Use
 ----------
 
-First, you need to install KenLM in your system and prepare Chinese corpora in simplified and traditional Chinese. (ex. jianti.txt, fanti.txt)
+First, you need to install KenLM on your system and prepare Chinese corpora in simplified and traditional Chinese. (ex. jianti.txt, fanti.txt)
 
 Then build the language models (names must be jianti.bin and fanti.bin):
 
