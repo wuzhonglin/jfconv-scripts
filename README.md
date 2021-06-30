@@ -20,4 +20,4 @@ Now you can perform conversion:
     $ echo "乾燥 乾坤" | ./fanjian.sh
     干燥 乾坤
 
-The results may vary depending on the data you provide.
+The results may vary depending on the corpora you provide.
