@@ -32,3 +32,14 @@ Now you can perform conversion:
     干燥 乾坤
 
 The results may vary depending on the corpora.
+
+Web UI
+----------
+install [streamlit](https://streamlit.io)
+```
+pip install streamlit
+```
+then run:
+```
+streamlit run ui.py
+```
