@@ -9,7 +9,7 @@ def randomname(n):
    randlst = [random.choice(string.ascii_letters + string.digits) for i in range(n)]
    return ''.join(randlst)
 
-st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nsource: https://github.com/hiroshi-manabe/jfconv-scripts"})
+st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nreference: https://github.com/wuzhonglin/jfconv-scripts"})
 st.header('Simplified/Traditional Chinese Converter :sunglasses:', divider='rainbow')
 if "default" not in st.session_state:
     st.session_state["default"]=""
