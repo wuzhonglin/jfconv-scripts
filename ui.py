@@ -21,6 +21,10 @@ def ft_post_processing(text1):
     return text1
 
 st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nsource: https://github.com/wuzhonglin/jfconv-scripts"})
+with st.expander('其他網站', expanded=False):
+    st.markdown(f"[聽打 https://pemail.epochbase.com/asr/](https://pemail.epochbase.com/asr/)")
+    st.markdown(f"[翻譯 https://pemail.epochbase.com/translate/](https://pemail.epochbase.com/translate/)")
+
 st.header('Simplified/Traditional Chinese Converter :sunglasses:', divider='rainbow')
 if "default" not in st.session_state:
     st.session_state["default"]=""
