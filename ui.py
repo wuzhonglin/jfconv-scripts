@@ -20,7 +20,7 @@ def ft_post_processing(text1):
         text1 = text1.replace(x, y)
     return text1
 
-st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nsource: https://github.com/hiroshi-manabe/jfconv-scripts"})
+st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nsource: https://github.com/wuzhonglin/jfconv-scripts"})
 st.header('Simplified/Traditional Chinese Converter :sunglasses:', divider='rainbow')
 if "default" not in st.session_state:
     st.session_state["default"]=""
