@@ -3,11 +3,22 @@ import streamlit as st
 import os
 import random
 import string
+import csv
 from subprocess import check_output
 
 def randomname(n):
    randlst = [random.choice(string.ascii_letters + string.digits) for i in range(n)]
    return ''.join(randlst)
+
+def ft_post_processing(text1):
+    thisdict = {}
+    with open("./ft_post_processing.csv", encoding='utf8', newline='') as f:
+        csvreader = csv.reader(f)
+        for row in csvreader:
+            thisdict[row[0]] = row[1]
+    for x, y in thisdict.items():
+        text1 = text1.replace(x, y)
+    return text1
 
 st.set_page_config(page_title='簡繁轉換', page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items={'About': "Simple Tradition Chinese Converter\nsource: https://github.com/hiroshi-manabe/jfconv-scripts"})
 st.header('Simplified/Traditional Chinese Converter :sunglasses:', divider='rainbow')
@@ -24,7 +35,8 @@ with col2:
         with open(tmpfile, "w") as text_file:
             text_file.write(txtFrom)
         if optionFrom == "簡->繁":
-            out = check_output(["./runjf.sh", tmpfile]).decode('utf-8')
+            out1 = check_output(["./runjf.sh", tmpfile]).decode('utf-8')
+            out = ft_post_processing(out1)
         else:
             out = check_output(["./runfj.sh", tmpfile]).decode('utf-8')
         st.session_state["default"] = out
